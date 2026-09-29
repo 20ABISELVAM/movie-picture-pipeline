@@ -14,7 +14,7 @@ RUN apk update && \
   libffi-dev \
   && pip install pipenv
 
-RUN mkdir -p /var/www/app && mkdir /app
+RUN mkdir -p /var/www/app
 
 COPY Pipfile* /app/
 RUN cd /app && pipenv install --system --deploy
